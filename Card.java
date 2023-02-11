@@ -1,7 +1,7 @@
 package Wk6Project;
 
 public class Card {
-
+	
 	private String name;
 	private int value;
 	
@@ -9,11 +9,11 @@ public class Card {
 		this.name = name;
 		this.value = value;
 	}
-	
+	//Describe to print the values associated with the card called.
 	public void describe() {
 		System.out.println(this.name + "--" + this.value);
 	}
-
+	// getters and setter
 	public String getName() {
 		return name;
 	}

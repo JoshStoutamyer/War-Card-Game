@@ -3,22 +3,22 @@ package Wk6Project;
 public class App {
 
 	public static void main(String[] args) {
-		
+//		Here you can manipulate the player names.
 		Player player1 = new Player("Billy Bubba Buck", 0);
 		Player player2 = new Player("Sally Suzy Snoozy", 0);
 		System.out.println("Welcome " + player1.playerName + " & " + player2.playerName + 
 				" to the game!");
-		
+//		Instantiate the deck we'll be playing with.
 		Deck deckOne = new Deck();
 		System.out.println("The deck is set with " + deckOne.cards.size() + " cards!\n");
-		
+//		Shuffle.
 		deckOne.shuffle();
-		
+//		Deal cards to each player.
 		for (int i = 1; i <= 52; i++) {
 			if (i % 2 != 0) {
 				Card player1Draw = deckOne.draw();
 				player1.hand.add(player1Draw);
-			} else {
+			} else { // saved some code here since if it wasn't going to be odd, it'd be even.
 				Card player2Draw = deckOne.draw();
 				player2.hand.add(player2Draw);
 			}
@@ -27,7 +27,7 @@ public class App {
 				player2.hand.size() + " cards."); 
 		System.out.println(player2.playerName + " has a hand of " +
 				player1.hand.size() + " cards.\n");
-		
+//		This loop automates the game.
 		for (int j = 0; j < 26; j++) {
 			Card player1FlippedCard = player1.flip();
 			System.out.print(player1.playerName + " flips a(n) ");
@@ -50,7 +50,7 @@ public class App {
 			}
 			
 		}
-		
+//		Conditions at the end to Declare a winner or a draw.
 		if (player1.score > player2.score) {
 			System.out.println(player1.playerName + " has WON with a score of: " +
 		player1.score);

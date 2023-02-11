@@ -9,6 +9,7 @@ public class Player {
 	int score;
 	String playerName;
 	
+	//for some Polymorphism I instantiated several constructors.
 	public Player(String playerName, int score) {
 		this.playerName = playerName;
 		this.score = score;
@@ -19,7 +20,7 @@ public class Player {
 	}
 	
 	public Player() {}
-
+// All my methods.
 public void describe() {
 	for (Card card : hand) {
 		card.describe();
